@@ -67,18 +67,12 @@
 [submodule "bundle/php"]
 	path = bundle/php
 	url = git://github.com/vim-scripts/php.vim--Garvin.git
-[submodule "bundle/vdebug"]
-	path = bundle/vdebug
-	url = git://github.com/joonty/vdebug.git
 [submodule "bundle/golang"]
 	path = bundle/golang
 	url = git://github.com/jnwhiteh/vim-golang.git
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = git://github.com/bling/vim-airline.git
-[submodule "bundle/vdebug.git"]
-	path = bundle/vdebug.git
-	url = git://github.com/joonty/vdebug
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git

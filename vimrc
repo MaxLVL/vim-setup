@@ -71,11 +71,12 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,node_modul
 " {{{ Colors and cursors
 
 " Default color scheme
-set background=light
+set background=dark
 set noshowmode
 let g:solarized_visibility='medium'
 let g:solarized_contrast='normal'
-color solarized
+colorscheme codedark
+
 
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -334,13 +335,12 @@ map <Leader>a :Ack<Space>
 " Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_symbols = {}
 let g:airline_symbols.linenr = '␊ '
 let g:airline_symbols.branch = '⎇ '
-let g:airline_solarized_reduced = 0
+let g:airline_theme = 'codedark'
 " Only show the column number.
 let g:airline_section_z = 'c:%c'
 " Use short forms for common modes.
@@ -378,14 +378,6 @@ nmap <Leader>b :Buffers<CR>
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
-
-" Configure paths for Vdebug
-" Paths maps are remote: local
-let g:vdebug_options = {
-\ 'path_maps': {"/mnt/hgfs/Sites/fresh_app": "/Users/mark/Sites/fresh_app"},
-\ 'server': '0.0.0.0'
-\}
-
 
 " Load vimrc in each directory that vim is opened in.
 " This provides 'per project' vim config.

@@ -1,8 +1,7 @@
-## Vim config
-
-This is my vim config, use at your own risk.
+## Vim setup
+Forked from Mark Story's vim config at https://github.com/markstory/vim-files
 
 ## Installation
 
-1. Clone this repository into `~/.vim`. `git clone git://github.com/markstory/vim-files.git ~/.vim`
+1. Clone this repository by running `git clone git://github.com/MaxLVL/vim-setup.git ~/.vim`
 2. Run `cd ~/.vim && make install`
