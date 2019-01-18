@@ -22,9 +22,6 @@
 [submodule "bundle/vividchalk"]
 	path = bundle/vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
-[submodule "bundle/solarized"]
-	path = bundle/solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
 [submodule "bundle/textile"]
 	path = bundle/textile
 	url = git://github.com/timcharper/textile.vim.git
@@ -40,9 +37,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = git://github.com/kchmck/vim-coffee-script.git
 [submodule "bundle/autoclose"]
 	path = bundle/autoclose
 	url = git://github.com/Townk/vim-autoclose.git
@@ -76,9 +70,6 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
-[submodule "bundle/rust"]
-	path = bundle/rust
-	url = git@github.com:wting/rust.vim.git
 [submodule "bundle/dockerfile"]
 	path = bundle/dockerfile
 	url = https://github.com/honza/dockerfile.vim.git
@@ -88,9 +79,6 @@
 [submodule "bundle/groovy"]
 	path = bundle/groovy
 	url = git://github.com/vim-scripts/groovy.vim.git
-[submodule "bundle/elm"]
-	path = bundle/elm
-	url = git@github.com:lambdatoast/elm.vim.git
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = https://github.com/junegunn/fzf.vim
@@ -103,3 +91,6 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "bundle/vim-"]
+	path = bundle/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
