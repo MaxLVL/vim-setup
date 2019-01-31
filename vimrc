@@ -299,9 +299,8 @@ cmap w!! w !sudo tee % >/dev/null
 
 " remap escape key 
 inoremap jj <ESC>
-=======
 " Add python pdb debugger statement on keystroke
-map <Leader>p :call InsertLine()<CR>
+map <Leader>d :call InsertLine()<CR>
 
 function! InsertLine()
   let trace = expand("import pdb; pdb.set_trace()")
