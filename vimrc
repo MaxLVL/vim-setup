@@ -77,7 +77,6 @@ let g:solarized_visibility='medium'
 let g:solarized_contrast='normal'
 colorscheme codedark
 
-
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7""
@@ -294,6 +293,8 @@ map <C-\> :tnext<CR>
 cmap w!! w !sudo tee % >/dev/null
 " }}}
 
+" remap escape key 
+inoremap jj <ESC>
 " {{{ Plugin config
 
 " ZoomWin configuration
@@ -312,9 +313,6 @@ imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-
-" RagTag
-let g:ragtag_global_maps = 1
 
 " Configure a.l.e. syntax checking
 let g:ale_linters = {
@@ -341,6 +339,7 @@ let g:airline_symbols = {}
 let g:airline_symbols.linenr = '␊ '
 let g:airline_symbols.branch = '⎇ '
 let g:airline_theme = 'codedark'
+
 " Only show the column number.
 let g:airline_section_z = 'c:%c'
 " Use short forms for common modes.
@@ -379,6 +378,8 @@ nmap <Leader>b :Buffers<CR>
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
 
+
 " Load vimrc in each directory that vim is opened in.
 " This provides 'per project' vim config.
 set exrc
+
