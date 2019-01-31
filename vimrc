@@ -73,8 +73,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,node_modul
 " Default color scheme
 set background=dark
 set noshowmode
-let g:solarized_visibility='medium'
-let g:solarized_contrast='normal'
 colorscheme codedark
 
 " Context-dependent cursor in the terminal
@@ -235,6 +233,10 @@ nmap <Leader>l <C-W>l
 map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
 
+" Adjust viewports/splits by size 
+nnoremap <silent> + :exe "resize " . (winheight(0) * 3/2)<CR>
+nnoremap <silent> - :exe "resize " . (winheight(0) * 2/3)<CR>
+
 " Lazy save / save + exit
 map <Leader>w :w<CR>
 map <Leader>q :q<CR>
@@ -264,6 +266,8 @@ map <ScrollWheelDown> <C-E>
 " Turn off Ex mode - I hate that thing.
 nnoremap Q <nop>
 
+" Macro for python PDB
+let @p = 'iimport pdb; pdb.set_trace()'
 " }}}
 
 " {{{ Custom commands
@@ -295,6 +299,14 @@ cmap w!! w !sudo tee % >/dev/null
 
 " remap escape key 
 inoremap jj <ESC>
+=======
+" Add python pdb debugger statement on keystroke
+map <Leader>p :call InsertLine()<CR>
+
+function! InsertLine()
+  let trace = expand("import pdb; pdb.set_trace()")
+  execute "normal o".trace
+endfunction
 " {{{ Plugin config
 
 " ZoomWin configuration
@@ -329,6 +341,7 @@ let g:ale_sign_warning = '❢'
 
 " Ack plugin
 map <Leader>a :Ack<Space>
+:set wildignore+=~/tags/**
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
