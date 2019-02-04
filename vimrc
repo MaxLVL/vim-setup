@@ -76,7 +76,6 @@ set background=dark
 set noshowmode
 colorscheme solarized
 
-
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7""
@@ -307,8 +306,10 @@ map <C-\> :tnext<CR>
 cmap w!! w !sudo tee % >/dev/null
 " }}}
 
+" remap escape key 
+inoremap jj <ESC>
 " Add python pdb debugger statement on keystroke
-map <Leader>p :call InsertLine()<CR>
+map <Leader>d :call InsertLine()<CR>
 
 function! InsertLine()
   let trace = expand("import pdb; pdb.set_trace()")
@@ -332,9 +333,6 @@ imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-
-" RagTag
-let g:ragtag_global_maps = 1
 
 " Configure a.l.e. syntax checking
 let g:ale_linters = {
@@ -362,6 +360,7 @@ let g:airline_symbols = {}
 let g:airline_symbols.linenr = '␊ '
 let g:airline_symbols.branch = '⎇ '
 let g:airline_theme = 'codedark'
+
 " Only show the column number.
 let g:airline_section_z = 'c:%c'
 " Use short forms for common modes.
@@ -400,6 +399,8 @@ nmap <Leader>b :Buffers<CR>
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1
 
+
 " Load vimrc in each directory that vim is opened in.
 " This provides 'per project' vim config.
 set exrc
+
