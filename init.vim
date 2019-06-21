@@ -1,1 +1,1 @@
-/Users/maxim/.vim/vimrc
+/Users/max/.vim/vimrc
