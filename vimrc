@@ -11,6 +11,8 @@ set number
 set ruler
 syntax on
 
+set statusline+=%{FugitiveStatusline()}
+
 " Set encoding
 set encoding=utf-8
 
