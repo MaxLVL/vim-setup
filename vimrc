@@ -394,6 +394,10 @@ let g:fzf_colors =
 
 nmap <Leader>t :Files<CR>
 nmap <Leader>b :Buffers<CR>
+
+" Set delay for gitgutter to be much faster than 4000ms default
+set updatetime=100
+
 " }}}
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
