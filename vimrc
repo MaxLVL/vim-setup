@@ -1,5 +1,3 @@
-" vim: foldmethod=marker :
-"
 set nocompatible
 
 " Include pathogen
@@ -55,9 +53,6 @@ set laststatus=2
 " Use the system clipboard
 set clipboard=unnamed
 
-" Enable folding via `{{{` and  `}}}`
-set foldmethod=marker
-
 " Use new regex engine to get better performance in ruby files
 set regexpengine=2 "
 
@@ -74,7 +69,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,node_modul
 syntax enable
 set background=dark
 set noshowmode
-colorscheme solarized
 
 " Context-dependent cursor in the terminal
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
@@ -317,9 +311,6 @@ function! InsertLine()
 endfunction
 " {{{ Plugin config
 
-" ZoomWin configuration
-map <Leader>z :ZoomWin<CR>
-
 " CTags
 let g:tlist_php_settings = 'php;c:class;d:constant;f:function'
 
@@ -333,19 +324,6 @@ imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
-
-" Configure a.l.e. syntax checking
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'python': ['flake8'],
-\}
-" Only lint on save.
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-
-" Customize flags
-let g:ale_sign_error = '✖︎'
-let g:ale_sign_warning = '❢'
 
 " Ack plugin
 map <Leader>a :Ack<Space>

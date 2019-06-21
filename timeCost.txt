@@ -1,0 +1,117 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.005  000.005: --- VIM STARTING ---
+000.225  000.220: Allocated generic buffers
+001.385  001.160: locale set
+001.429  000.044: window checked
+002.557  001.128: inits 1
+002.781  000.224: parsing arguments
+002.798  000.017: expanding arguments
+002.851  000.053: shell init
+003.974  001.123: Termcap init
+004.021  000.047: inits 2
+004.445  000.424: init highlight
+005.314  000.668  000.668: sourcing $VIM/vimrc
+006.474  000.322  000.322: sourcing /Users/max/.vim/autoload/pathogen.vim
+016.199  000.276  000.276: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+016.319  000.574  000.298: sourcing /usr/share/vim/vim80/syntax/synload.vim
+033.650  000.174  000.174: sourcing /Users/max/.vim/bundle/markdown/ftdetect/markdown.vim
+033.917  000.186  000.186: sourcing /Users/max/.vim/bundle/mustache/ftdetect/mustache.vim
+034.072  000.026  000.026: sourcing /Users/max/.vim/bundle/vim-fugitive/ftdetect/fugitive.vim
+034.413  000.143  000.143: sourcing /Users/max/.vim/bundle/vim-javascript/ftdetect/javascript.vim
+034.626  000.126  000.126: sourcing /Users/max/.vim/bundle/vim-jsx/ftdetect/javascript.vim
+034.811  000.102  000.102: sourcing /Users/max/.vim/bundle/vim-markdown/ftdetect/markdown.vim
+034.946  018.451  017.694: sourcing /usr/share/vim/vim80/filetype.vim
+034.997  019.451  000.426: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+035.476  000.176  000.176: sourcing /usr/share/vim/vim80/syntax/nosyntax.vim
+036.057  000.233  000.233: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+036.174  000.526  000.293: sourcing /usr/share/vim/vim80/syntax/synload.vim
+036.205  000.997  000.295: sourcing /usr/share/vim/vim80/syntax/syntax.vim
+036.676  000.244  000.244: sourcing /usr/share/vim/vim80/syntax/syncolor.vim
+075.037  000.023  000.023: sourcing /usr/share/vim/vim80/filetype.vim
+075.277  000.048  000.048: sourcing /usr/share/vim/vim80/ftplugin.vim
+075.496  000.043  000.043: sourcing /usr/share/vim/vim80/indent.vim
+076.260  070.725  049.597: sourcing $HOME/.vimrc
+076.355  000.517: sourcing vimrc file(s)
+076.897  000.322  000.322: sourcing /Users/max/.vim/bundle/ack/plugin/ack.vim
+078.211  001.082  001.082: sourcing /Users/max/.vim/bundle/fzf/plugin/fzf.vim
+082.076  003.655  003.655: sourcing /Users/max/.vim/bundle/nerdtree/plugin/NERD_tree.vim
+082.872  000.269  000.269: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline.vim
+083.254  000.130  000.130: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/init.vim
+083.762  000.116  000.116: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/parts.vim
+084.932  000.145  000.145: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/util.vim
+084.963  002.644  001.984: sourcing /Users/max/.vim/bundle/vim-airline/plugin/airline.vim
+085.130  000.023  000.023: sourcing /Users/max/.vim/bundle/vim-airline-themes/plugin/airline-themes.vim
+149.748  064.467  064.467: sourcing /Users/max/.vim/bundle/vim-autotag/plugin/autotag.vim
+150.286  000.367  000.367: sourcing /Users/max/.vim/bundle/vim-fugitive/plugin/fugitive.vim
+150.959  000.198  000.198: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/utility.vim
+151.583  000.129  000.129: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/highlight.vim
+152.263  001.845  001.518: sourcing /Users/max/.vim/bundle/vim-gitgutter/plugin/gitgutter.vim
+152.786  000.073  000.073: sourcing /usr/share/vim/vim80/plugin/getscriptPlugin.vim
+153.139  000.283  000.283: sourcing /usr/share/vim/vim80/plugin/gzip.vim
+153.471  000.262  000.262: sourcing /usr/share/vim/vim80/plugin/logiPat.vim
+153.558  000.016  000.016: sourcing /usr/share/vim/vim80/plugin/manpager.vim
+153.812  000.189  000.189: sourcing /usr/share/vim/vim80/plugin/matchparen.vim
+154.402  000.520  000.520: sourcing /usr/share/vim/vim80/plugin/netrwPlugin.vim
+154.512  000.021  000.021: sourcing /usr/share/vim/vim80/plugin/rrhelper.vim
+154.624  000.032  000.032: sourcing /usr/share/vim/vim80/plugin/spellfile.vim
+154.850  000.155  000.155: sourcing /usr/share/vim/vim80/plugin/tarPlugin.vim
+155.075  000.105  000.105: sourcing /usr/share/vim/vim80/plugin/tohtml.vim
+155.320  000.170  000.170: sourcing /usr/share/vim/vim80/plugin/vimballPlugin.vim
+155.604  000.195  000.195: sourcing /usr/share/vim/vim80/plugin/zipPlugin.vim
+156.387  000.635  000.635: sourcing /usr/local/opt/fzf/plugin/fzf.vim
+156.393  002.977: loading plugins
+156.466  000.073: loading packages
+156.530  000.064: loading after plugins
+156.535  000.005: inits 3
+156.865  000.330: reading viminfo
+156.895  000.030: setting raw mode
+156.899  000.004: start termcap
+156.917  000.018: clearing screen
+160.187  000.859  000.859: sourcing /usr/share/vim/vim80/scripts.vim
+163.644  000.154  000.154: sourcing /usr/share/vim/vim80/ftplugin/text.vim
+165.724  000.599  000.599: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions.vim
+166.085  000.103  000.103: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/quickfix.vim
+166.367  000.056  000.056: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/netrw.vim
+166.732  000.122  000.122: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/hunks.vim
+167.445  000.427  000.427: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/branch.vim
+167.809  000.088  000.088: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/fugitiveline.vim
+168.394  000.206  000.206: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/whitespace.vim
+168.896  000.103  000.103: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/po.vim
+169.256  000.151  000.151: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/wordcount.vim
+169.688  000.229  000.229: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline.vim
+169.951  000.080  000.080: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/autoshow.vim
+170.452  000.148  000.148: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/tabs.vim
+170.916  000.267  000.267: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/buffers.vim
+175.042  000.111  000.111: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/section.vim
+175.622  000.340  000.340: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/highlighter.vim
+179.850  000.111  000.111: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/themes.vim
+180.241  000.862  000.751: sourcing /Users/max/.vim/autoload/airline/themes/codedark.vim
+187.666  000.522  000.522: sourcing /Users/max/.vim/autoload/airline/themes/codedark.vim
+212.077  000.269  000.269: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/builder.vim
+212.570  000.126  000.126: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/wordcount/formatters/default.vim
+213.025  000.133  000.133: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/default.vim
+244.200  007.365  007.365: sourcing /Users/max/.vim/bundle/vim-fugitive/autoload/fugitive.vim
+245.618  075.381: opening buffers
+246.195  000.338  000.338: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter.vim
+247.038  000.232  000.232: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/async.vim
+247.506  000.253  000.253: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/debug.vim
+269.573  020.209  020.209: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/diff.vim
+277.807  000.869  000.869: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/hunk.vim
+279.066  000.602  000.602: sourcing /Users/max/.vim/bundle/vim-gitgutter/autoload/gitgutter/sign.vim
+279.934  011.813: BufEnter autocommands
+279.939  000.005: editing files in windows
+281.043  000.182  000.182: sourcing /Users/max/.vim/bundle/nerdtree/nerdtree_plugin/exec_menuitem.vim
+281.786  000.631  000.631: sourcing /Users/max/.vim/bundle/nerdtree/nerdtree_plugin/fs_menu.vim
+282.770  002.018: VimEnter autocommands
+282.773  000.003: before starting main loop
+283.569  000.260  000.260: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/ctrlspace.vim
+284.323  000.269  000.269: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/builder.vim
+284.812  000.118  000.118: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/buflist.vim
+289.518  000.205  000.205: sourcing /Users/max/.vim/bundle/vim-airline/autoload/airline/extensions/tabline/formatters/default.vim
+293.717  010.092: first screen update
+293.722  000.005: --- VIM STARTED ---
