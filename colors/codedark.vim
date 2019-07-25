@@ -98,8 +98,8 @@ let s:cdDiffRedLightLight = {'gui': '#FB0101', 'cterm': s:cterm08, 'cterm256': '
 let s:cdDiffGreenDark = {'gui': '#373D29', 'cterm': s:cterm0B, 'cterm256': '237'}
 let s:cdDiffGreenLight = {'gui': '#4B5632', 'cterm': s:cterm09, 'cterm256': '58'}
 
-let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '239'}
-let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '239'}
+let s:cdSearchCurrent = {'gui': '#49545F', 'cterm': s:cterm09, 'cterm256': '236'}
+let s:cdSearch = {'gui': '#4C4E50', 'cterm': s:cterm0A, 'cterm256': '236'}
 
 " Syntax colors:
 
@@ -132,6 +132,7 @@ call <sid>hi('Normal', s:cdFront, s:cdBack, 'none', {})
 call <sid>hi('ColorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Cursor', s:cdCursorDark, s:cdCursorLight, 'none', {})
 call <sid>hi('CursorLine', {}, s:cdCursorDarkDark, 'none', {})
+call <sid>hi('CursorColumn', {}, s:cdCursorDarkDark, 'none', {})
 call <sid>hi('Directory', s:cdBlue, s:cdBack, 'none', {})
 call <sid>hi('DiffAdd', {}, s:cdDiffGreenDark, 'none', {})
 call <sid>hi('DiffChange', {}, s:cdDiffRedDark, 'none', {})
@@ -189,7 +190,6 @@ call <sid>hi('Repeat', s:cdPink, {}, 'none', {})
 call <sid>hi('Label', s:cdPink, {}, 'none', {})
 call <sid>hi('Operator', s:cdFront, {}, 'none', {})
 call <sid>hi('Keyword', s:cdPink, {}, 'none', {})
-call <sid>hi('pythonOperator', s:cdPink, {}, 'none', {})
 call <sid>hi('Exception', s:cdPink, {}, 'none', {})
 
 call <sid>hi('PreProc', s:cdPink, {}, 'none', {})
@@ -215,9 +215,27 @@ call <sid>hi("Conceal", s:cdFront, s:cdBack, 'none', {})
 
 call <sid>hi('Ignore', s:cdFront, {}, 'none', {})
 
-call <sid>hi('Error', s:cdRed, {}, 'undercurl', s:cdRed)
+call <sid>hi('Error', s:cdRed, s:cdBack, 'undercurl', s:cdRed)
 
 call <sid>hi('Todo', s:cdNone, s:cdLeftMid, 'none', {})
+
+" Markdown:
+call <sid>hi('markdownBold', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownCode', s:cdOrange, {}, 'none', {})
+call <sid>hi('markdownRule', s:cdBlue, {}, 'bold', {})
+call <sid>hi('markdownCodeDelimiter', s:cdOrange, {}, 'none', {})
+call <sid>hi('markdownHeadingDelimiter', s:cdBlue, {}, 'none', {})
+call <sid>hi('markdownFootnote', s:cdOrange, {}, 'none', {})
+call <sid>hi('markdownFootnoteDefinition', s:cdOrange, {}, 'none', {})
+call <sid>hi('markdownUrl', s:cdLightBlue, {}, 'underline', {})
+call <sid>hi('markdownLinkText', s:cdOrange, {}, 'none', {})
+call <sid>hi('markdownEscape', s:cdYellowOrange, {}, 'none', {})
+
+" JSON:
+call <sid>hi('jsonKeyword', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('jsonEscape', s:cdYellowOrange, {}, 'none', {})
+call <sid>hi('jsonNull', s:cdBlue, {}, 'none', {})
+call <sid>hi('jsonBoolean', s:cdBlue, {}, 'none', {})
 
 " HTML:
 call <sid>hi('htmlTag', s:cdGray, {}, 'none', {})
@@ -252,9 +270,29 @@ call <sid>hi('jsVariableDef', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('jsFuncArgs', s:cdLightBlue, {}, 'none', {})
 call <sid>hi('jsRegexpString', s:cdLightRed, {}, 'none', {})
 call <sid>hi('jsThis', s:cdBlue, {}, 'none', {})
+call <sid>hi('jsDestructuringBlock', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('jsObjectKey', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('jsGlobalObjects', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('jsModuleKeyword', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('jsClassDefinition', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('jsClassKeyword', s:cdBlue, {}, 'none', {})
+call <sid>hi('jsExtendsKeyword', s:cdBlue, {}, 'none', {})
+call <sid>hi('jsExportDefault', s:cdPink, {}, 'none', {})
+call <sid>hi('jsFuncCall', s:cdYellow, {}, 'none', {})
+call <sid>hi('jsObjectKey', s:cdYellow, {}, 'none', {})
+call <sid>hi('jsObjectValue', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('jsParen', s:cdLightBlue, {}, 'none', {})
+
+" XML:
+call <sid>hi('xmlTag', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('xmlTagName', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('xmlEndTag', s:cdBlueGreen, {}, 'none', {})
 
 " Ruby:
 call <sid>hi('rubyClassNameTag', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('rubyClassName', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('rubyModuleName', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('rubyConstant', s:cdBlueGreen, {}, 'none', {})
 
 " Golang:
 call <sid>hi('goPackage', s:cdBlue, {}, 'none', {})
@@ -282,3 +320,39 @@ call <sid>hi('goReceiverType', s:cdDarkBlue, {}, 'none', {})
 call <sid>hi('goFunctionCall', s:cdYellow, {}, 'none', {})
 call <sid>hi('goMethodCall', s:cdYellow, {}, 'none', {})
 call <sid>hi('goSingleDecl', s:cdLightBlue, {}, 'none', {})
+
+" Python:
+call <sid>hi('pythonStatement', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonOperator', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonException', s:cdPink, {}, 'none', {})
+call <sid>hi('pythonExClass', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('pythonBuiltinObj', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('pythonBuiltinType', s:cdBlueGreen, {}, 'none', {})
+call <sid>hi('pythonBoolean', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonNone', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonTodo', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonClassVar', s:cdBlue, {}, 'none', {})
+call <sid>hi('pythonClassDef', s:cdBlueGreen, {}, 'none', {})
+
+" TeX:
+call <sid>hi('texStatement', s:cdBlue, {}, 'none', {})
+call <sid>hi('texBeginEnd', s:cdYellow, {}, 'none', {})
+call <sid>hi('texBeginEndName', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('texOption', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('texBeginEndModifier', s:cdLightBlue, {}, 'none', {})
+call <sid>hi('texDocType', s:cdPink, {}, 'none', {})
+call <sid>hi('texDocTypeArgs', s:cdLightBlue, {}, 'none', {})
+
+" Git:
+call <sid>hi('gitcommitHeader', s:cdGray, {}, 'none', {})
+call <sid>hi('gitcommitOnBranch', s:cdGray, {}, 'none', {})
+call <sid>hi('gitcommitBranch', s:cdPink, {}, 'none', {})
+call <sid>hi('gitcommitComment', s:cdGray, {}, 'none', {})
+call <sid>hi('gitcommitSelectedType', s:cdGreen, {}, 'none', {})
+call <sid>hi('gitcommitSelectedFile', s:cdGreen, {}, 'none', {})
+call <sid>hi('gitcommitDiscardedType', s:cdRed, {}, 'none', {})
+call <sid>hi('gitcommitDiscardedFile', s:cdRed, {}, 'none', {})
+call <sid>hi('gitcommitOverflow', s:cdRed, {}, 'none', {})
+call <sid>hi('gitcommitSummary', s:cdPink, {}, 'none', {})
+call <sid>hi('gitcommitBlank', s:cdPink, {}, 'none', {})
+

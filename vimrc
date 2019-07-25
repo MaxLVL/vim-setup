@@ -25,7 +25,7 @@ let mapleader=','
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set list listchars=tab:▸\ ,eol:¬,trail:·
+set list listchars=tab:▸\ ,trail:·
 set noeol
 set autoindent
 
@@ -69,7 +69,8 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*.pyc,node_modul
 
 " Default color scheme
 syntax enable
-set background=dark
+set background=light
+colorscheme codedark
 set noshowmode
 
 " Context-dependent cursor in the terminal
@@ -89,6 +90,7 @@ set nowritebackup
 " Persistent undos
 if !&diff
   set undodir=~/.vim/backup
+  filetype plugin on
   set undofile
 endif
 
@@ -161,7 +163,10 @@ au BufRead,BufNewFile *.twig,*.tpl set ft=htmljinja
 au BufRead,BufNewFile *.coffee set ft=coffee
 
 " Highlight JSON & es6 like Javascript
-au BufNewFile,BufRead {*.json,*.es6} set ft=javascript
+au BufNewFile,BufRead {*.json,*.es6,*.js} set ft=javascript
+
+" Javascript, CSS, and html settings
+ au FileType {css,typescript,javascript,mustache,htmljinja,html} setl textwidth=120 softtabstop=2 shiftwidth=2 tabstop=2 colorcolumn=120
 
 " hbs and mustache files.
 au BufRead,BufNewFile {*.mustache,*.hbs} set ft=mustache
@@ -173,7 +178,7 @@ au BufRead,BufNewFile Jenkinsfile set ft=groovy
 au BufNewFile,BufRead {*.lr} set ft=markdown
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python setl softtabstop=4 shiftwidth=4 tabstop=4 textwidth=90 expandtab colorcolumn=79
+au FileType python setl softtabstop=4 shiftwidth=4 tabstop=4 textwidth=90 expandtab 
 au FileType rst setl textwidth=80 expandtab colorcolumn=81
 
 " Custom python highlighting rules
@@ -183,6 +188,8 @@ augroup python
                 \   syn keyword pythonSelf self
                 \ | highlight def link pythonSelf Special
 augroup end
+
+let g:javascript_plugin_jsdoc = 1
 
 " Make ruby,scss,sass,less use 2 spaces for indentation.
 au FileType {cucumber,yaml,sass,scss,ruby,eruby,less} setl softtabstop=2 shiftwidth=2 tabstop=2 expandtab colorcolumn=80
@@ -324,8 +331,12 @@ map <Leader>n :NERDTreeToggle<CR>
 map <Leader>/ <plug>NERDCommenterToggle<CR>
 imap <Leader>/ <Esc><plug>NERDCommenterToggle<CR>i
 
+" Remap the esc key
+imap jj <Esc>
+
 " Command-T configuration
 let g:CommandTMaxHeight=20
+:set wildignore+=*.pyc
 
 " Ack plugin
 map <Leader>a :Ack<Space>
